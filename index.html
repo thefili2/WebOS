@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebOS</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="os">
+      <div id="desktop">
+        <div id="desktop-icons"></div>
+      </div>
+      <div id="windows-layer"></div>
+      <div id="taskbar">
+        <button id="start-btn" aria-label="Applications menu">
+          <svg viewBox="0 0 24 24">
+            <path d="M4 8l4-4 4 4M12 8l4-4 4 4M4 8v4h4V8M12 8v4h4V8M4 12v4h4v-4M12 12v4h4v-4M4 16v4h4v-4M12 16v4h4v-4" />
+          </svg>
+          <span>Applications</span>
+        </button>
+        <div id="taskbar-pinned"></div>
+        <div class="taskbar-sep"></div>
+        <div id="taskbar-windows"></div>
+        <div class="taskbar-sep"></div>
+        <div id="taskbar-tray">
+          <span class="tray-icon" title="Volume">
+            <svg viewBox="0 0 24 24">
+              <path d="M3 9v6h4l5 5V4L7 9H3z" />
+              <path d="M16.5 7.5a5 5 0 010 9" />
+            </svg>
+          </span>
+          <span class="tray-icon" title="Network">
+            <svg viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="2" class="filled" />
+            </svg>
+          </span>
+          <span id="clock"></span>
+        </div>
+      </div>
+      <div id="start-menu" class="hidden" role="menu">
+        <input type="text" id="start-search" placeholder="Search applications..." autocomplete="off">
+        <div id="start-apps"></div>
+        <div id="start-power">
+          <button id="power-restart">Restart</button>
+          <button id="power-shutdown">Shutdown</button>
+        </div>
+      </div>
+      <div id="context-menu" class="hidden"></div>
+      <div id="notify-area"></div>
+    </div>
+    <div id="wizard" class="hidden">
+      <div id="wizard-box">
+        <div class="wizard-header" id="wizard-title"></div>
+        <div class="wizard-body" id="wizard-body"></div>
+        <div class="wizard-footer" id="wizard-footer"></div>
+      </div>
+    </div>
+    <div id="shutdown-screen" class="hidden">
+      <p>Shutting down...</p>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
